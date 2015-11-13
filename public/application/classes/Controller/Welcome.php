@@ -4,7 +4,7 @@ class Controller_Welcome extends Controller {
 
 	public function action_index()
 	{
-		$this->response->body('Hello, world! I am a fucking awesome Kohana framework :)');
+		$this->response->body('Hello, world! I am a fucking awesome Kohana framework :) And also Git works as well.');
 		$vehicles = ORM::factory("vehicle")->find_all();
 	}
 
