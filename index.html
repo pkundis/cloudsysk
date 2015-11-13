@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
+
+var map;
+function initMap() {
+  var myLatLng = {lat: 48.7264455, lng: 21.240962};
+  
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Tomaskov bytik</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Tomas Konyarik</b>, byva na tejto adrese.</p>'+
+      '<p>Pohlavie: muz</p>'+
+      '<p>Vek: 24</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 16
+  });
+  
+  var image = {
+    url: 'number.png',
+    size: new google.maps.Size(70, 70),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(12.5, 12.5),
+    scaledSize: new google.maps.Size(25, 25)
+  };
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Lubim Tomaska',
+    icon: image
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtsxtcPYub3AbaE6WBvczCZoUQnjuLWtQ&callback=initMap">
+    </script>
+  </body>
+</html>
