@@ -19,8 +19,8 @@ return array
 			 * Ports and sockets may be appended to the hostname.
 			 */
 			'hostname'   => '127.0.0.1',
-			'database'   => 'cloudsysk',
-			'username'   => 'peter',
+			'database'   => 'cloudsy1_sk',
+			'username'   => 'cloudsy1_peter',
 			'password'   => 'Erfacesu1991',
 			'persistent' => FALSE,
 		),
@@ -76,10 +76,10 @@ return array
 	(
 		'type'       => 'MySQLi',
 		'connection' => array(
-			'hostname'   => 'localhost',
-			'database'   => 'cloudsysk',
-			'username'   => 'root',
-			'password'   => FALSE,
+			'hostname'   => '127.0.0.1',
+			'database'   => 'cloudsy1_sk',
+			'username'   => 'cloudsy1_peter',
+			'password'   => 'Erfacesu1991',
 			'persistent' => FALSE,
 			'ssl'        => NULL,
 		),
